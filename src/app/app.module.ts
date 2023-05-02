@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {RouterModule} from '@angular/router'
 import { APP_BASE_HREF } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt'
 
 
 import { AppComponent } from './app.component';
@@ -11,7 +14,11 @@ import { FooterComponent } from './navegacao/footer/footer.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootConfig } from './app.routes';
+import { ProdutosService } from './produtos/produtos.service';
+import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 
+
+registerLocaleData(localePt);
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +26,17 @@ import { rootConfig } from './app.routes';
     HomeComponent,
     FooterComponent,
     SobreComponent,
-    ContatoComponent
+    ContatoComponent,
+    ListaProdutoComponent
   ],
   imports: [
     BrowserModule,
-    [RouterModule.forRoot(rootConfig,{useHash:false})]
+    [RouterModule.forRoot(rootConfig,{useHash:false})], 
+    HttpClientModule
   ],
   providers: [
-    {provide:APP_BASE_HREF, useValue:'/'}
+    {provide:APP_BASE_HREF, useValue:'/'},
+    ProdutosService
   ],
   bootstrap: [AppComponent]
 })

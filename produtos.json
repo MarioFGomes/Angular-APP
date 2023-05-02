@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nome": "mouse Microsoft",
-      "valor": 15.90,
+      "valor": 20000,
       "promocao": false,
       "valorPromo": 0,
       "imagem": "mouse.jpg"
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "nome": "Teclado Microsoft",
-      "valor": 30.00,
+      "valor": 30000,
       "promocao": false,
       "valorPromo": 0,
       "imagem": "teclado.jpg"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "nome": "Monitor Samsung",
-      "valor": 250.00,
+      "valor": 250.000,
       "promocao": false,
       "valorPromo": 0,
       "imagem": "monitor.jpg"
